@@ -101,8 +101,12 @@ class UI {
 		this.hamburgerMenu.style.display = "none";
 		// Display close menu
 		this.closeMenu.style.display = "block";
-		// disable window scroll
+		// disable window scroll on mobile
 		document.body.style.overflow = "hidden";
+		// disable scroll on mobile
+		document.ontouchmove = (e) => {
+			e.preventDefault();
+		};
 	}
 
 	// Close menu clicked
@@ -113,8 +117,12 @@ class UI {
 		this.hamburgerMenu.style.display = "block";
 		// Remove close menu
 		this.closeMenu.style.display = "none";
-		// enable window scroll
+		// enable window scroll on mobile
 		document.body.style.overflow = "auto";
+		// enable scroll on mobile
+		document.ontouchmove = () => {
+			return true;
+		};
 	}
 
 	// Update total amount of money backed & total amount of backers

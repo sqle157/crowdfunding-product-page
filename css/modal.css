@@ -50,7 +50,7 @@ input[type="text"]:focus {
 	height: 100%;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.4);
-	padding-top: 10%;
+	padding-top: 13.125rem;
 }
 
 .modal .container-md.flexbox {
