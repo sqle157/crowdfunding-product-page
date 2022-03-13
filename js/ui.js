@@ -47,10 +47,12 @@ class UI {
 			// Add active class to current modal
 			modal.classList.add("active-modal");
 			modal.style.display = "block";
+			modal.scrollTop = 0;
 		} else {
 			// Add active class to current modal
 			modal.classList.add("active-modal");
 			modal.style.display = "block";
+			modal.scrollTop = 0;
 		}
 		// disable window scroll
 		document.body.style.overflow = "hidden";
