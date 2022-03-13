@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+:root {
+	--primary-color: hsl(176, 50%, 47%);
+	--secondary-color: hsl(176, 72%, 28%);
+	--dark-gray: hsl(0, 0%, 48%);
+
+	--fs-32: 2rem;
+	--fs-28: 1.75rem;
+	--fs-20: 1.25rem;
+	--fs-18: 1.125rem;
+	--fs-15: 0.9375rem;
+	--fs-14: 0.875rem;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: var(--fs-28);
+	font-weight: bold;
+}
+
+h2,
+h5 {
+	font-size: var(--fs-32);
+	font-weight: bold;
+	margin: 0;
+}
+
+h3 {
+	margin: 1.125rem 0;
+}
+
+p {
+	margin-top: 0.75rem;
+	opacity: 0.5;
+}
+
+body {
+	font-family: "Commissioner", sans-serif;
+	font-size: 1rem;
+	line-height: 1.875rem;
+	background-color: #fafafa;
+	position: relative;
+	overflow: auto;
+}
+
+div[data-id="3"] {
+	opacity: 0.5;
+}
+
+/* Header/Hero */
+.header {
+	width: 100%;
+	height: 400px;
+	background-image: url("../images/image-hero-desktop.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.header__navbar {
+	width: 100%;
+	height: 128px;
+	padding: 0 25px;
+}
+
+.header__navbar .container {
+	height: 100%;
+}
+
+.header__navbar .flexbox {
+	justify-content: space-between;
+}
+
+.navbar__nav {
+	display: flex;
+}
+
+.navbar__nav li {
+	margin: 0 1.125rem;
+}
+
+.navbar__nav a {
+	color: #fff;
+}
+
+.navbar__nav a:hover {
+	text-decoration: underline;
+}
+
+.header__nav--mobile,
+.hamburger,
+.hamburger--close {
+	display: none;
+}
+
+/* Main */
+/* Back Section */
+.main {
+	width: 100%;
+	height: 100%;
+}
+
+.main .container-md {
+	position: relative;
+	top: -6rem;
+}
+
+.back .btn-secondary {
+	padding: 0.75rem 3.5rem;
+}
+
+.back img:first-child {
+	position: relative;
+	margin: auto;
+	top: -25px;
+}
+
+.bookmark-icon {
+	position: relative;
+	left: 20%;
+	cursor: pointer;
+	filter: contrast(0.5);
+	z-index: 1;
+}
+
+/* Active states of bookmark-btn & bookmark-icon */
+.bookmark-btn--active {
+	background-color: hsl(176, 72%, 28%, 0.1);
+	color: var(--primary-color);
+}
+
+.bookmark-icon--active {
+	filter: contrast(1);
+}
+
+.bookmark-icon--active g circle {
+	fill: var(--secondary-color);
+}
+
+.bookmark-icon--active g path {
+	fill: #fff;
+}
+
+/* Stats Section */
+.stats {
+	padding-top: 1.125rem;
+}
+
+.stats .flexbox > div {
+	line-height: 1.5;
+	flex: 1;
+}
+
+.stats .flexbox > div:nth-child(2) {
+	border-left: 1px solid rgb(0, 0, 0, 0.15);
+	border-right: 1px solid rgb(0, 0, 0, 0.15);
+}
+
+.stats .flexbox > div:nth-child(2),
+.stats .flexbox > div:nth-child(3) {
+	padding-left: 3rem;
+}
+
+.stats p {
+	margin-top: 0.25rem;
+}
+
+.progress-bar {
+	height: 12px;
+	border-radius: 10px;
+	background-color: hsl(0, 0%, 48%, 0.1);
+	margin-bottom: 20px;
+}
+
+#progress {
+	height: 100%;
+	border-radius: 10px;
+	background-color: var(--primary-color);
+}
+
+/* About Section*/
+.about .flexbox {
+	flex-direction: column;
+	align-items: start;
+}
+
+.card__reward {
+	padding: 1.75rem;
+	border: 1px solid rgb(0, 0, 0, 0.15);
+	border-radius: 10px;
+	margin: 1.75rem 0 0;
+	flex: 1;
+}
+
+.reward__stand,
+.reward__left {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.reward__left {
+	margin: 20px 0;
+}
+
+.reward__stand p {
+	margin: 0;
+	color: #3cb3ab;
+	font-weight: 500;
+}
+
+/* MEDIA */
+@media only screen and (max-width: 768px) {
+	.container,
+	.container-md {
+		max-width: 90%;
+	}
+
+	.card {
+		padding: 0 2rem;
+	}
+
+	.header {
+		background-image: url("../images/image-hero-mobile.jpg");
+		height: 300px;
+	}
+
+	.header__navbar {
+		padding: 0;
+	}
+
+	.back .btn-secondary {
+		display: none;
+	}
+
+	.back .flexbox svg {
+		left: 0;
+	}
+
+	.stats {
+		text-align: center;
+	}
+
+	.stats .flexbox {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.stats .flexbox > div:nth-child(2) {
+		border-left: none;
+		border-right: none;
+		border-top: 1px solid rgb(0, 0, 0, 0.15);
+		border-bottom: 1px solid rgb(0, 0, 0, 0.15);
+		padding-block: 20px;
+	}
+
+	.stats .flexbox > div:nth-child(2),
+	.stats .flexbox > div:nth-child(3) {
+		padding-left: 0;
+		margin: 10px 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	h1 {
+		font-size: var(--fs-20);
+	}
+
+	p {
+		font-size: var(--fs-14);
+	}
+
+	h3 {
+		font-size: var(--fs-18);
+	}
+
+	.navbar__nav {
+		display: none;
+	}
+
+	/* Mobile Menu */
+	.header__nav--mobile {
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		padding-top: 100px;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	.navbar__nav--mobile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: #fff;
+		border-radius: 10px;
+	}
+
+	.navbar__nav--mobile li {
+		padding: 1.125rem 1rem;
+	}
+
+	.navbar__nav--mobile > li:not(:first-child) {
+		border-top: 1px solid rgb(0, 0, 0, 0.15);
+	}
+
+	.navbar__nav--mobile a {
+		color: #000;
+	}
+
+	.navbar__nav--mobile a:hover {
+		color: var(--primary-color);
+	}
+
+	.hamburger {
+		display: block;
+		cursor: pointer;
+	}
+
+	.header__logo,
+	.hamburger,
+	.hamburger--close {
+		/* Make sure these buttons & logo are stacked above the mobile navbar */
+		z-index: 10000;
+	}
+
+	.reward {
+		padding: 1rem;
+	}
+
+	.reward__left,
+	.reward__stand {
+		flex-direction: column;
+		align-items: start;
+	}
+
+	.reward__left {
+		gap: 20px;
+	}
+
+	.btn {
+		padding: 0.75rem 1.25rem;
+	}
+}

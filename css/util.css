@@ -1,0 +1,84 @@
+/* Utilities */
+.container {
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.container-md {
+	max-width: 730px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.container-sm {
+	max-width: 540px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.flexbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+
+.btn {
+	padding: 0.75rem 2.5rem;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+	background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+	background-color: hsl(0, 0%, 48%, 0.1);
+	color: hsl(0, 0%, 48%, 0.8);
+}
+
+.btn-dark {
+	background-color: var(--dark-gray);
+}
+
+.btn-outline {
+	background-color: transparent;
+	border: 1px solid var(--primary-color);
+	color: #000;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.card {
+	width: 100%;
+	padding: 0 4rem 2rem;
+	border-radius: 10px;
+	background-color: #ffffff;
+}
+
+.card .flexbox {
+	justify-content: space-between;
+	margin: 2rem 0;
+}
+
+.span__left {
+	font-size: var(--fs-15);
+	font-weight: normal;
+	opacity: 0.5;
+}
