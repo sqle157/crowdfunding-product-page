@@ -4,13 +4,14 @@ const ui = new UI();
 ui.updateProgressBar(ui.currentTotal, 100000);
 
 // Close current open element when click outside of element
-window.onclick = (e) => {
+window.addEventListener("click", (e) => {
+	console.log(e.target);
 	if (e.target.classList.contains("active-modal")) {
 		ui.closeModalBtnClicked(e.target);
 	} else if (e.target.classList.contains("header__nav--mobile")) {
 		ui.closeMenuClicked();
 	}
-};
+});
 
 // Listen for click on bookmark button
 ui.bookmarkBtn.addEventListener("click", (e) => {

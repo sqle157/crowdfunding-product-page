@@ -55,7 +55,7 @@ class UI {
 			modal.scrollTop = 0;
 		}
 		// disable window scroll
-		document.body.style.overflow = "hidden";
+		document.body.style.position = "fixed";
 	}
 
 	// Close modal button clicked
@@ -66,7 +66,7 @@ class UI {
 		// Clear input fields
 		this.clearModalFields();
 		// enable window scroll
-		document.body.style.overflow = "auto";
+		document.body.style.position = "relative";
 	}
 
 	// Radio button checked
@@ -101,12 +101,12 @@ class UI {
 		this.hamburgerMenu.style.display = "none";
 		// Display close menu
 		this.closeMenu.style.display = "block";
-		// disable window scroll on mobile
-		document.body.style.overflow = "hidden";
-		// disable scroll on mobile
-		document.ontouchmove = (e) => {
-			e.preventDefault();
-		};
+		// disable window scroll
+		document.body.style.position = "fixed";
+		// // disable scroll on mobile
+		// document.ontouchmove = (e) => {
+		// 	e.preventDefault();
+		// };
 	}
 
 	// Close menu clicked
@@ -117,12 +117,8 @@ class UI {
 		this.hamburgerMenu.style.display = "block";
 		// Remove close menu
 		this.closeMenu.style.display = "none";
-		// enable window scroll on mobile
-		document.body.style.overflow = "auto";
-		// enable scroll on mobile
-		document.ontouchmove = () => {
-			return true;
-		};
+		// enable window scroll
+		document.body.style.position = "relative";
 	}
 
 	// Update total amount of money backed & total amount of backers
