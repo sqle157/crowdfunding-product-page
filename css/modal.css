@@ -28,7 +28,7 @@ input[type="radio"]:checked::before {
 }
 
 input[type="text"] {
-	width: 40%;
+	width: 100%;
 	background-color: transparent;
 	border: none;
 	outline: none;
@@ -139,7 +139,8 @@ input[type="text"]:focus {
 	flex: 2;
 }
 
-.modal .modal__input > button {
+.modal .modal__input > button,
+.modal .modal__input > span {
 	margin: 0 5px;
 	flex: 0.35;
 }
@@ -242,8 +243,9 @@ input[type="text"]:focus {
 		margin-left: 0;
 	}
 
+	.modal .modal__input > span,
 	.modal .modal__input > button {
-		flex: 0.75;
+		flex: 0.5;
 	}
 
 	.modal .btn {
