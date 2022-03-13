@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/sqle157/Crowfunding-product-page)
-- Live Site URL: [Live Demo](https://sqle157.github.io/Crowfunding-product-page)
+- Solution URL: [Github](https://github.com/sqle157/crowdfunding-product-page)
+- Live Site URL: [Live Demo](https://sqle157.github.io/crowdfunding-product-page)
 
 ### Built with
 
