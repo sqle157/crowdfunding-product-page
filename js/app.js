@@ -18,7 +18,7 @@ if (window.innerWidth > 576) {
 } else {
 	// Mobile
 	// Close current open element when touch outside of element
-	window.addEventListener("touchstart", (e) => {
+	window.addEventListener("touchend", (e) => {
 		// console.log(e.type);
 		// console.log(e.target);
 		if (e.target.classList.contains("active-modal")) {
