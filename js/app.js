@@ -21,7 +21,6 @@ if (window.innerWidth > 576) {
 	window.addEventListener("touchend", (e) => {
 		// console.log(e.type);
 		// console.log(e.target);
-		e.preventDefault();
 		if (e.target.classList.contains("active-modal")) {
 			ui.closeModalBtnClicked(e.target);
 		} else if (e.target.classList.contains("header__nav--mobile")) {
