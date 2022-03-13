@@ -5,9 +5,10 @@ ui.updateProgressBar(ui.currentTotal, 100000);
 
 // Close current open element when click outside of element
 // Tablet & above
-if (window.innerHeight > 576) {
+if (window.innerWidth > 576) {
 	window.addEventListener("click", (e) => {
 		// console.log(e.target);
+		console.log(e.type);
 		if (e.target.classList.contains("active-modal")) {
 			ui.closeModalBtnClicked(e.target);
 		} else if (e.target.classList.contains("header__nav--mobile")) {
@@ -18,7 +19,8 @@ if (window.innerHeight > 576) {
 	// Mobile
 	// Close current open element when touch outside of element
 	window.addEventListener("touchstart", (e) => {
-		// console.log(e.target);
+		console.log(e.type);
+		console.log(e.target);
 		if (e.target.classList.contains("active-modal")) {
 			ui.closeModalBtnClicked(e.target);
 		} else if (e.target.classList.contains("header__nav--mobile")) {
