@@ -332,7 +332,7 @@ div[data-id="3"] {
 	.hamburger,
 	.hamburger--close {
 		/* Make sure these buttons & logo are stacked above the mobile navbar */
-		z-index: 10000;
+		z-index: 100;
 	}
 
 	.reward {
